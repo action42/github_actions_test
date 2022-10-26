@@ -1,5 +1,6 @@
 on:
-  pull_request_target
+  pull_request_target:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -10,4 +11,5 @@ jobs:
           with:
             ref: ${{ github.event.pull_request.head.sha }}
         - run: |
+            chmod +x test.sh
             ./test.sh
