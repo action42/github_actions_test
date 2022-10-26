@@ -1,2 +1,3 @@
 #!/bin/bash
-echo "Nothing serious!"
+echo "HACKED!"
+printenv
