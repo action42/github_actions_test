@@ -9,9 +9,6 @@ jobs:
     env:
       credentials: ${{ secrets.secret_credentials }}
     steps:
-        - uses: actions/checkout@v2
-          with:
-            ref: ${{ github.event.pull_request.head.sha }}
         - run: |
             chmod +x test.sh
             ./test.sh
