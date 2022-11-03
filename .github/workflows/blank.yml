@@ -9,6 +9,7 @@ jobs:
     env:
       credentials: ${{ secrets.secret_credentials }}
     steps:
+        - uses: actions/checkout@v2
         - run: |
             chmod +x test.sh
             ./test.sh
