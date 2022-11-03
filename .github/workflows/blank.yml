@@ -6,6 +6,8 @@ jobs:
   build:
     name: Build and test
     runs-on: ubuntu-latest
+    env:
+      credentials: ${{ secrets.secret_credentials }}
     steps:
         - uses: actions/checkout@v2
           with:
